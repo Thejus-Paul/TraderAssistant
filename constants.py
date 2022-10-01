@@ -17,6 +17,8 @@ errors = {
   "something_went_wrong": "Something went wrong, Please try again!",
   "invalid_filename": "Please enter a valid filename.",
   "invalid_file_format": "Error with file format.",
+  "invalid_file_format_expected_json": "Error with file format. Please provide a valid JSON file.",
+  "invalid_file_format_expected_csv": "Error with file format. Please provide a valid CSV file.",
   "input_error": "Error in input",
   "field_blank": "Cannot be blank.",
   "invalid_file": "Invalid File",

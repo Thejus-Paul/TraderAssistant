@@ -39,7 +39,7 @@ def load_stock_prices(stock_prices):
         except BadRequest as Error:
             print(Error)
         except:
-            print(errors["invalid_file_format"])
+            print(errors["invalid_file_format_expected_json"])
 
 
 def manually_enter_trade(trading_data):

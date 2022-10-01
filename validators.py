@@ -7,7 +7,7 @@ def buy_or_sell(flag):
         return trade_related_constants["buy"]
     elif (flag == "s"):
         return trade_related_constants["sell"]
-    raise BadRequest(errors["invalid_file_format"])
+    raise BadRequest(errors["invalid_file_format_expected_csv"])
 
 
 def format_date(date):
@@ -15,13 +15,13 @@ def format_date(date):
         datetime.strptime(date, date_format)
         return date
     except:
-        raise BadRequest(errors["invalid_file_format"])
+        raise BadRequest(errors["invalid_file_format_expected_csv"])
 
 
 def test_stock_details(value, datatype):
     if (datatype(value) > 0):
         return datatype(value)
-    raise BadRequest(errors["invalid_file_format"])
+    raise BadRequest(errors["invalid_file_format_expected_csv"])
 
 def test_valid_file_name_and_extension(filename, extension):
     if filename.split(".")[1:] in [[
